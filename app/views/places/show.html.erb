@@ -3,4 +3,7 @@
 	<p id="address"><%= @place.address %></p><!-- /#address -->
 	<br><br>
 	<p><%= @place.description %></p>
+	<div class="pull-right">
+		<%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+	</div><!-- /.pull-right -->
 </div><!-- /.booyah-box col-xs-10 col-xs-offset-1 -->
