@@ -33,7 +33,12 @@
 					</ul><!-- /.nav navbar-nav -->
 
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Link</a></li>
+						<% if user_signed_in? %>
+						<li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+						<% else %>
+						<li><%= link_to 'Sign In', new_user_session_path %></li>
+						<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+						<% end %>
 					</ul><!-- /.nav navbar-nav navbar-right -->
 				</div><!-- /#bs-example-navbar-collapse-1.collapse navbar-collapse -->
 			</div><!-- /.container-fluid -->
