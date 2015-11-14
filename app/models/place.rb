@@ -7,4 +7,5 @@ class Place < ActiveRecord::Base
   after_validation :geocode
 
   belongs_to :user
+  has_many :comments
 end
