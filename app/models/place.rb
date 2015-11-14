@@ -3,5 +3,8 @@ class Place < ActiveRecord::Base
   validates :address, presence: true
   validates :description, presence: true
 
+  geocoded_by :address
+  after_validation :geocode
+
   belongs_to :user
 end
