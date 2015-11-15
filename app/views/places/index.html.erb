@@ -3,6 +3,41 @@
 	<%= will_paginate %>
 </div><!-- /.col-xs-10 col-xs-offset-1 -->
 
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<!-- Indicators 
+	=========================================================== -->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li><!-- /.active -->
+		<li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li><!-- /.active -->
+	</ol><!-- /.carousel-indicators -->
+
+	<!-- Wrapper for slides 
+	=========================================================== -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<%= image_tag 'slider1.jpg' %>
+			<div class="carousel-caption">
+				From DreamWorks: Up
+			</div><!-- /.carousel-caption -->
+		</div><!-- /.item active -->
+		<div class="item">
+			<%= image_tag 'slider2.jpg' %>
+			<div class="carousel-caption">
+				A beautiful sunset.
+			</div><!-- /.carousel-caption -->
+		</div><!-- /.item -->
+	</div><!-- /.carousel-inner -->
+
+	<!-- Controls 
+	=========================================================== -->
+	<a href="#carousel-example-generic" class="left carousel-control" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a href="#carousel-example-generic" class="right carousel-control" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div><!-- /#carousel-example-generic.carousel slide -->
+
 <% @places.each do |place| %>
 <div class="booyah-box col-xs-10 col-xs-offset-1">
 	<% if place.photos.present? %>
