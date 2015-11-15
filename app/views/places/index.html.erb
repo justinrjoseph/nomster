@@ -1,8 +1,3 @@
-<div class="col-xs-10 col-xs-offset-1">
-	<%= page_entries_info %><br>
-	<%= will_paginate %>
-</div><!-- /.col-xs-10 col-xs-offset-1 -->
-
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	<!-- Indicators 
 	=========================================================== -->
@@ -15,15 +10,15 @@
 	=========================================================== -->
 	<div class="carousel-inner">
 		<div class="item active">
-			<%= image_tag 'slider1.jpg' %>
+			<%= image_tag 'slider1.jpg', class: 'img-responsive' %>
 			<div class="carousel-caption">
-				From DreamWorks: Up
+				test caption for carousel image 1
 			</div><!-- /.carousel-caption -->
 		</div><!-- /.item active -->
 		<div class="item">
-			<%= image_tag 'slider2.jpg' %>
+			<%= image_tag 'slider2.jpg', class: 'img-responsive' %>
 			<div class="carousel-caption">
-				A beautiful sunset.
+				test caption for carousel image 2
 			</div><!-- /.carousel-caption -->
 		</div><!-- /.item -->
 	</div><!-- /.carousel-inner -->
@@ -37,6 +32,11 @@
 		<span class="glyphicon glyphicon-chevron-right"></span>
 	</a>
 </div><!-- /#carousel-example-generic.carousel slide -->
+
+<div class="col-xs-10 col-xs-offset-1">
+	<%= page_entries_info %><br>
+	<%= will_paginate %>
+</div><!-- /.col-xs-10 col-xs-offset-1 -->
 
 <% @places.each do |place| %>
 <div class="booyah-box col-xs-10 col-xs-offset-1">

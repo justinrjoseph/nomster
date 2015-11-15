@@ -7,6 +7,7 @@ body {
 	background: url('/assets/cartographer.png');
 	border-radius: 0;
 	box-shadow: 0 1px 3px #2a2a2a;
+  margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
@@ -127,4 +128,25 @@ blockquote:after {
 
 blockquote p {
   display: inline;
+}
+
+.carousel {
+  margin-bottom: 30px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  height: 550px;
+  width: 100%;
+}
+
+.carousel-caption {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, .95) 2px 2px;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  position: absolute;
+  left: 0;
 }
