@@ -84,6 +84,21 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
+.index-photo {
+  text-align: center;
+}
+
+.photo {
+  display: block;
+  margin: 0 auto;
+}
+
+.photo-caption {
+  font-style: italic;
+  font-size: 1.1em;
+  text-align: center;
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;

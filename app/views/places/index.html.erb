@@ -5,12 +5,26 @@
 
 <% @places.each do |place| %>
 <div class="booyah-box col-xs-10 col-xs-offset-1">
-	<h1><%= link_to place.name, place_path(place) %></h1>
-	<p id="address"><%= place.address %></p><br><br>
-	<p><%= place.description %></p><br>
+	<% if place.photos.present? %>
+	<div class="col-xs-12 col-sm-7">
+	<% else %>
+	<div class="col-xs-12">
+	<% end %>
+		<h1><%= link_to place.name, place_path(place) %></h1>
+		<p id="address"><%= place.address %></p><br><br>
+		<p><%= place.description %></p><br>
 
 	<% if place.user.present? %>
-	<small><%= place.user.email %></small>
+		<small><%= place.user.email %></small><br><br>
+	<% end %>
+	</div><!-- /.col-xs-8 -->
+
+	<% if place.photos.present? %>
+	<div class="col-xs-12 col-sm-5">
+		<%= link_to place_path(place) do %>
+			<%= image_tag place.photos.first.picture, class: 'photo img-responsive' %>
+		<% end %>
+	</div><!-- /.col-xs-4 pull-right -->
 	<% end %>
 
 	<% if place.comments.present? %>
