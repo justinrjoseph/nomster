@@ -70,6 +70,8 @@ Nomster::Application.configure do
     :authentication => :plain
   }
 
+  ActionMailer::Base.delivery_method = :smtp
+
   config.action_mailer.default_url_options = { host: 'nomster-justin-joseph.herokuapp.com' }
 
   # Ignore bad email addresses and do not raise email delivery errors.
