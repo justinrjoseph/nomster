@@ -61,6 +61,15 @@ Nomster::Application.configure do
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
 
+  ActionMailer::Base.smtp_settings = {
+    :port           => ENV['MAILGUN_SMTP_PORT']
+    :address        => ENV['MAILGUN_SMTP_SERVER']
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN']
+    :password       => ENV['MAILGUN_SMTP_PASSWORD']
+    :domain         => 'nomster-justin-joseph.herokuapp.com'
+    :authentication => :plain
+  }
+
   config.action_mailer.default_url_options = { host: 'nomster-justin-joseph.herokuapp.com' }
 
   # Ignore bad email addresses and do not raise email delivery errors.
